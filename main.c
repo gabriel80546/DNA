@@ -31,7 +31,7 @@ int verificaStrings(char *vermelho, char *azul) {
 
 int main(int argc, char *argv[]) {
     char *vermelho, *azul, *junta;
-    int i;
+    int i, j = 0;
 
     if (argc < 3) {
         printf("Erro: é necessário informar duas strings na linha de comando\n");
@@ -49,20 +49,28 @@ int main(int argc, char *argv[]) {
         free(vermelho);
         return 1;
     }
-    junta = (char *) malloc(((strlen(argv[2]) + 1) + (strlen(argv[1]) + 1)) * sizeof(char));
+
+    // Aloca memória para a string 'junta'
+    junta = (char *) malloc(((strlen(argv[1]) + 1) + (strlen(argv[2]) + 1)) * sizeof(char));
     if (junta == NULL) {
-        printf("Erro: não foi possível alocar memória para azul\n");
-        // free(junta);
+        printf("Erro: não foi possível alocar memória para 'junta'\n");
         return 1;
     }
 
+    // Percorre as strings 'argv[1]' e 'argv[2]' e junta seus caracteres em 'junta'
+    for(i = 0; i < strlen(argv[1]) || i < strlen(argv[2]); i++) {
+        if (i < strlen(argv[1])) {
+            junta[j++] = argv[1][i];
+        }
+        if (i < strlen(argv[2])) {
+            junta[j++] = argv[2][i];
+        }
+    }
+    junta[j] = '\0';
+    printf("%s\n", junta);
+
     strcpy(vermelho, argv[1]);
     strcpy(azul, argv[2]);
-
-    for(i = 0; i < strlen(junta); i++) {
-        strncat(junta, *(vermelho + i), 1);
-        strncat(junta, *(azul + i), 1);
-    }
 
     // char vermelho[] = "CCGTCAGTCAACGTACGTACGTACGTACGACGTACGACGTACGTACTGACGTCGCTCAGT";
     // char azul[] = "GGCAGTCAGTTGCATGCATGCATGCATGCTGCATGCTGCATGCATGACTGCAGCGAGTCA";
@@ -70,12 +78,14 @@ int main(int argc, char *argv[]) {
     if(resultado == 0) {
         printf("vermelho: \"%s\"\n", vermelho);
         printf("azul:     \"%s\"\n", azul);
-        printf("SMILES: \"%s\"", junta);
+        printf("junta: \"%s\"\n", junta);
+        printf("SMILES: ?????\n");
         printf("Fita Dupla: Doente\n");
     } else if(resultado == 1) {
         printf("vermelho: \"%s\"\n", vermelho);
         printf("azul:     \"%s\"\n", azul);
-        printf("SMILES: \"%s\"\n", junta);
+        printf("junta: \"%s\"\n", junta);
+        printf("SMILES: ?????\n");
         printf("Fita Dupla: Saudavel\n");
     } else {
         printf("Erro desconhecido\n");
@@ -83,6 +93,7 @@ int main(int argc, char *argv[]) {
 
     free(vermelho);
     free(azul);
+    free(junta);
 
     return 0;
 }
