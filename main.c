@@ -29,20 +29,60 @@ int verificaStrings(char *vermelho, char *azul) {
     return 1;
 }
 
-int main() {
-    char vermelho[] = "CCGTCAGTCAACGTACGTACGTACGTACGACGTACGACGTACGTACTGACGTCGCTCAGT";
-    char azul[] = "GGCAGTCAGTTGCATGCATGCATGCATGCTGCATGCTGCATGCATGACTGCAGCGAGTCA";
+int main(int argc, char *argv[]) {
+    char *vermelho, *azul, *junta;
+    int i;
+
+    if (argc < 3) {
+        printf("Erro: é necessário informar duas strings na linha de comando\n");
+        return 1;
+    }
+
+    vermelho = (char *) malloc((strlen(argv[1]) + 1) * sizeof(char));
+    if (vermelho == NULL) {
+        printf("Erro: não foi possível alocar memória para vermelho\n");
+        return 1;
+    }
+    azul = (char *) malloc((strlen(argv[2]) + 1) * sizeof(char));
+    if (azul == NULL) {
+        printf("Erro: não foi possível alocar memória para azul\n");
+        free(vermelho);
+        return 1;
+    }
+    junta = (char *) malloc(((strlen(argv[2]) + 1) + (strlen(argv[1]) + 1)) * sizeof(char));
+    if (junta == NULL) {
+        printf("Erro: não foi possível alocar memória para azul\n");
+        // free(junta);
+        return 1;
+    }
+
+    strcpy(vermelho, argv[1]);
+    strcpy(azul, argv[2]);
+
+    for(i = 0; i < strlen(junta); i++) {
+        strncat(junta, *(vermelho + i), 1);
+        strncat(junta, *(azul + i), 1);
+    }
+
+    // char vermelho[] = "CCGTCAGTCAACGTACGTACGTACGTACGACGTACGACGTACGTACTGACGTCGCTCAGT";
+    // char azul[] = "GGCAGTCAGTTGCATGCATGCATGCATGCTGCATGCTGCATGCATGACTGCAGCGAGTCA";
     int resultado = verificaStrings(vermelho, azul);
     if(resultado == 0) {
         printf("vermelho: \"%s\"\n", vermelho);
-        printf("azul: \"%s\"\n", azul);
+        printf("azul:     \"%s\"\n", azul);
+        printf("SMILES: \"%s\"", junta);
         printf("Fita Dupla: Doente\n");
     } else if(resultado == 1) {
         printf("vermelho: \"%s\"\n", vermelho);
-        printf("azul: \"%s\"\n", azul);
+        printf("azul:     \"%s\"\n", azul);
+        printf("SMILES: \"%s\"\n", junta);
         printf("Fita Dupla: Saudavel\n");
     } else {
         printf("Erro desconhecido\n");
     }
+
+    free(vermelho);
+    free(azul);
+
     return 0;
 }
