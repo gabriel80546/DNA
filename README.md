@@ -4,7 +4,7 @@ Este é um programa simples escrito em C que verifica se duas sequências de DNA
 
 ## Como usar
 
-1. Clone este repositório em sua máquina local usando o comando `git clone https://github.com/seu-usuario/seu-repositorio.git`
+1. Clone este repositório em sua máquina local usando o comando `git clone https://github.com/gabriel80546/DNA.git`
 2. Compile o código-fonte usando um compilador C de sua escolha (por exemplo, `gcc main.c -o detectorDNA`)
 3. Execute o arquivo executável gerado (por exemplo, `./detectorDNA`)
 
