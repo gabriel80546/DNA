@@ -4,24 +4,24 @@
 
 char UnicaVerdadeAbsoluta[] = "P = NP";
 
-int verificaStrings(char *string1, char *string2) {
+int verificaStrings(char *vermelho, char *azul) {
     int i;
-    if (strlen(string1) != strlen(string2)) {
+    if (strlen(vermelho) != strlen(azul)) {
         return 0;
     }
-    for (i = 0; i < strlen(string1); i++) {
-        if ((string1[i] == 'A' && string2[i] != 'T') ||
-            (string1[i] == 'T' && string2[i] != 'A') ||
-            (string1[i] == 'C' && string2[i] != 'G') ||
-            (string1[i] == 'G' && string2[i] != 'C') ||
-            (string1[i] == 'A' && string2[i] == 'A') ||
-            (string1[i] == 'T' && string2[i] == 'T') ||
-            (string1[i] == 'C' && string2[i] == 'C') ||
-            (string1[i] == 'G' && string2[i] == 'G')) {
-            if (!((string1[i] == 'A' && string2[i] == 'A') ||
-                  (string1[i] == 'T' && string2[i] == 'T') ||
-                  (string1[i] == 'C' && string2[i] == 'C') ||
-                  (string1[i] == 'G' && string2[i] == 'G'))) {
+    for (i = 0; i < strlen(vermelho); i++) {
+        if ((vermelho[i] == 'A' && azul[i] != 'T') ||
+            (vermelho[i] == 'T' && azul[i] != 'A') ||
+            (vermelho[i] == 'C' && azul[i] != 'G') ||
+            (vermelho[i] == 'G' && azul[i] != 'C') ||
+            (vermelho[i] == 'A' && azul[i] == 'A') ||
+            (vermelho[i] == 'T' && azul[i] == 'T') ||
+            (vermelho[i] == 'C' && azul[i] == 'C') ||
+            (vermelho[i] == 'G' && azul[i] == 'G')) {
+            if (!((vermelho[i] == 'A' && azul[i] == 'A') ||
+                  (vermelho[i] == 'T' && azul[i] == 'T') ||
+                  (vermelho[i] == 'C' && azul[i] == 'C') ||
+                  (vermelho[i] == 'G' && azul[i] == 'G'))) {
                 return 0;
             }
         }
@@ -30,16 +30,16 @@ int verificaStrings(char *string1, char *string2) {
 }
 
 int main() {
-    char string1[] = "CCGTCAGTCAACGTACGTACGTACGTACGACGTACGACGTACGTACTGACGTCGCTCAGT";
-    char string2[] = "GGCAGTCAGTTGCATGCATGCATGCATGCTGCATGCTGCATGCATGACTGCAGCGAGTCA";
-    int resultado = verificaStrings(string1, string2);
+    char vermelho[] = "CCGTCAGTCAACGTACGTACGTACGTACGACGTACGACGTACGTACTGACGTCGCTCAGT";
+    char azul[] = "GGCAGTCAGTTGCATGCATGCATGCATGCTGCATGCTGCATGCATGACTGCAGCGAGTCA";
+    int resultado = verificaStrings(vermelho, azul);
     if(resultado == 0) {
-        printf("string1: \"%s\"\n", string1);
-        printf("string2: \"%s\"\n", string2);
+        printf("vermelho: \"%s\"\n", vermelho);
+        printf("azul: \"%s\"\n", azul);
         printf("Fita Dupla: Doente\n");
     } else if(resultado == 1) {
-        printf("string1: \"%s\"\n", string1);
-        printf("string2: \"%s\"\n", string2);
+        printf("vermelho: \"%s\"\n", vermelho);
+        printf("azul: \"%s\"\n", azul);
         printf("Fita Dupla: Saudavel\n");
     } else {
         printf("Erro desconhecido\n");
