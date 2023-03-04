@@ -10,4 +10,4 @@ Este é um programa simples escrito em C que verifica se duas sequências de DNA
 
 ## Licença
 
-Este projeto é licenciado sob a licença [WTFPL](http://www.wtfpl.net/). Veja o arquivo `LICENSE.md` para obter mais detalhes.
+Este projeto é licenciado sob a licença [WTFPL](http://www.wtfpl.net/). Veja o arquivo `LICENSE` para obter mais detalhes.
