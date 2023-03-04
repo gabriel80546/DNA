@@ -50,14 +50,12 @@ int main(int argc, char *argv[]) {
         return 1;
     }
 
-    // Aloca memória para a string 'junta'
     junta = (char *) malloc(((strlen(argv[1]) + 1) + (strlen(argv[2]) + 1)) * sizeof(char));
     if (junta == NULL) {
         printf("Erro: não foi possível alocar memória para 'junta'\n");
         return 1;
     }
 
-    // Percorre as strings 'argv[1]' e 'argv[2]' e junta seus caracteres em 'junta'
     for(i = 0; i < strlen(argv[1]) || i < strlen(argv[2]); i++) {
         if (i < strlen(argv[1])) {
             junta[j++] = argv[1][i];
@@ -67,13 +65,13 @@ int main(int argc, char *argv[]) {
         }
     }
     junta[j] = '\0';
-    printf("%s\n", junta);
 
     strcpy(vermelho, argv[1]);
     strcpy(azul, argv[2]);
 
     // char vermelho[] = "CCGTCAGTCAACGTACGTACGTACGTACGACGTACGACGTACGTACTGACGTCGCTCAGT";
     // char azul[] = "GGCAGTCAGTTGCATGCATGCATGCATGCTGCATGCTGCATGCATGACTGCAGCGAGTCA";
+    printf("%s\n", junta);
     int resultado = verificaStrings(vermelho, azul);
     if(resultado == 0) {
         printf("vermelho: \"%s\"\n", vermelho);
