@@ -29,6 +29,9 @@ int verificaStrings(char *vermelho, char *azul) {
     return 1;
 }
 
+
+
+
 int main(int argc, char *argv[]) {
     char *vermelho, *azul, *junta;
     int i, j = 0;
