@@ -29,7 +29,30 @@ int verificaStrings(char *vermelho, char *azul) {
     return 1;
 }
 
-
+char* dnaToSmiles(char* dna) {
+    char* smiles = (char*) malloc((strlen(dna)*3 + 1) * sizeof(char)); /* aloca memória para a string SMILES */
+    if (smiles == NULL) {
+        printf("Erro: não foi possível alocar memória para a string SMILES\n");
+        return NULL;
+    }
+    int i, j = 0;
+    for(i = 0; i < strlen(dna); i++) {
+        if (dna[i] == 'A') {
+            strcat(smiles, "UUA");
+            j += 3;
+        } else if (dna[i] == 'C') {
+            strcat(smiles, "UGU");
+            j += 3;
+        } else if (dna[i] == 'G') {
+            strcat(smiles, "GUA");
+            j += 3;
+        } else if (dna[i] == 'T') {
+            strcat(smiles, "UAU");
+            j += 3;
+        }
+    }
+    return smiles;
+}
 
 
 int main(int argc, char *argv[]) {
@@ -80,17 +103,23 @@ int main(int argc, char *argv[]) {
         printf("vermelho: \"%s\"\n", vermelho);
         printf("azul:     \"%s\"\n", azul);
         printf("junta: \"%s\"\n", junta);
+        printf("SMILES: %s\n", dnaToSmiles(junta));
         printf("SMILES: ?????\n");
         printf("Fita Dupla: Doente\n");
     } else if(resultado == 1) {
         printf("vermelho: \"%s\"\n", vermelho);
         printf("azul:     \"%s\"\n", azul);
         printf("junta: \"%s\"\n", junta);
+        printf("SMILES: %s\n", dnaToSmiles(junta));
         printf("SMILES: ?????\n");
         printf("Fita Dupla: Saudavel\n");
     } else {
         printf("Erro desconhecido\n");
     }
+
+
+
+
 
     free(vermelho);
     free(azul);
