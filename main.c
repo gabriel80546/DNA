@@ -69,8 +69,8 @@ int main(int argc, char *argv[]) {
     strcpy(vermelho, argv[1]);
     strcpy(azul, argv[2]);
 
-    // char vermelho[] = "CCGTCAGTCAACGTACGTACGTACGTACGACGTACGACGTACGTACTGACGTCGCTCAGT";
-    // char azul[] = "GGCAGTCAGTTGCATGCATGCATGCATGCTGCATGCTGCATGCATGACTGCAGCGAGTCA";
+    /* char vermelho[] = "CCGTCAGTCAACGTACGTACGTACGTACGACGTACGACGTACGTACTGACGTCGCTCAGT"; */
+    /* char azul[] = "GGCAGTCAGTTGCATGCATGCATGCATGCTGCATGCTGCATGCATGACTGCAGCGAGTCA"; */
     printf("%s\n", junta);
     int resultado = verificaStrings(vermelho, azul);
     if(resultado == 0) {
