@@ -54,6 +54,9 @@ char* dnaToSmiles(char* dna) {
     return smiles;
 }
 
+/* TODO */
+/* TAREFA */
+/* TESTAR A TRINCA DE RNA */
 
 int main(int argc, char *argv[]) {
     char *vermelho, *azul, *junta;

@@ -1,0 +1,6 @@
+Helicase – o ponto em que a replicação começa é conhecido como a origem da replicação. Helicase traz o procedimento de separação de fita, que leva à formação do garfo de replicação. Ele quebra a ligação de hidrogênio entre os pares de bases para separar o fio. Utiliza energia obtida da Hidrólise de ATP para realizar a função.
+
+Proteína SSB – O próximo passo é que a Proteína de Ligação de DNA de Cadeia Simples se ligue ao DNA de fita simples. Seu trabalho é impedir que os fios se liguem novamente.
+
+DNA Primase – Uma vez que os filamentos estejam separados e prontos, a replicação pode ser iniciada. Para isso, é necessário um primer para vincular na origem. Primers são sequências curtas de RNA, com cerca de 10 nucleotídeos de comprimento. Primase sintetiza os primers.
+
