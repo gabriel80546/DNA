@@ -103,23 +103,19 @@ int main(int argc, char *argv[]) {
         printf("vermelho: \"%s\"\n", vermelho);
         printf("azul:     \"%s\"\n", azul);
         printf("junta: \"%s\"\n", junta);
-        printf("SMILES: %s\n", dnaToSmiles(junta));
+        printf("SMILES: \"%s\"\n", dnaToSmiles(junta));
         printf("SMILES: ?????\n");
         printf("Fita Dupla: Doente\n");
     } else if(resultado == 1) {
         printf("vermelho: \"%s\"\n", vermelho);
         printf("azul:     \"%s\"\n", azul);
         printf("junta: \"%s\"\n", junta);
-        printf("SMILES: %s\n", dnaToSmiles(junta));
+        printf("SMILES: \"%s\"\n", dnaToSmiles(junta));
         printf("SMILES: ?????\n");
         printf("Fita Dupla: Saudavel\n");
     } else {
         printf("Erro desconhecido\n");
     }
-
-
-
-
 
     free(vermelho);
     free(azul);
