@@ -1,5 +1,75 @@
 body {
-    background-color: rgb(228, 165, 50);
+    background-color: #3498db;
     padding: 0;
     margin: 0;
+}
+.flexContainer {
+    margin-top: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+.rectangleOne {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    width: 407px;
+    /* height: 585px; */
+    background: #282828;
+    border-radius: 1em;
+    padding-top: 1em;
+    padding-bottom: 3em;
+}
+
+.rectangleTwo {
+    width: 282px;
+    height: 433px;
+    background: #D9D9D9;
+}
+
+.rectangleSix {
+    width: 235px;
+    height: 43px;
+    background: #797979;
+}
+
+.rectangleFive {
+    width: 235px;
+    height: 43px;
+    background: #797979;
+}
+
+.dna {
+    width: 35px;
+    height: 25px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    color: #cecece;
+}
+
+.rna {
+    width: 61px;
+    height: 23px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    color: #cecece;
+}
+
+.titulo {
+    width: 161px;
+    height: 23px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    color: #cecece;
 }
