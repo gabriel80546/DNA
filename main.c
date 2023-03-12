@@ -9,7 +9,7 @@
 // Objetivo 9: Duplicar a Fita de RNA sintetizada em 2 FItas duplas de DNA (fase de síntese)
 // Objetivo 10: Calcular IFCA das fitas 1 e 2 do objetivo 9.
 // Objetivo 11: identificar possíveis danos nas fitas 1 e 2 via identificação nos mapas de cor.
-// O
+// Objetivo 12: Por fim, criar padronização de probabilidade de cancer do usuário.
 
 
 
