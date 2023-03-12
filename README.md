@@ -7,6 +7,8 @@ Este é um programa simples escrito em C que verifica se duas sequências de DNA
 1. Clone este repositório em sua máquina local usando o comando `git clone https://github.com/gabriel80546/DNA.git`
 2. Compile o código-fonte usando o Makefile fornecido: `make`
 3. Execute o arquivo executável gerado: `./dna`
+[Web](https://gabriel80546.github.io/DNA)
+
 
 ## Objetivos do código.
 
