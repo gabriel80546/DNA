@@ -1,3 +1,7 @@
+// Fas
+
+
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -102,20 +106,13 @@ int main(int argc, char *argv[]) {
     /* char azul[] = "GGCAGTCAGTTGCATGCATGCATGCATGCTGCATGCTGCATGCATGACTGCAGCGAGTCA"; */
     printf("%s\n", junta);
     int resultado = verificaStrings(vermelho, azul);
-    if(resultado == 0) {
+    if(resultado == 0 || resultado == 1) {
         printf("vermelho: \"%s\"\n", vermelho);
         printf("azul:     \"%s\"\n", azul);
         printf("junta: \"%s\"\n", junta);
         printf("SMILES: \"%s\"\n", dnaToSmiles(junta));
         printf("SMILES: ?????\n");
         printf("Fita Dupla: Doente\n");
-    } else if(resultado == 1) {
-        printf("vermelho: \"%s\"\n", vermelho);
-        printf("azul:     \"%s\"\n", azul);
-        printf("junta: \"%s\"\n", junta);
-        printf("SMILES: \"%s\"\n", dnaToSmiles(junta));
-        printf("SMILES: ?????\n");
-        printf("Fita Dupla: Saudavel\n");
     } else {
         printf("Erro desconhecido\n");
     }
