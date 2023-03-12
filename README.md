@@ -10,18 +10,18 @@ Este é um programa simples escrito em C que verifica se duas sequências de DNA
 
 ## Objetivos do código.
 
-// objetivo 1: testar a fita de dna do usuário.
+// objetivo 1: testar a fita de DNA ou RNA do usuário.
 // objetivo 2: sintetizar a fita de RNA via código SMILES.
 // objetivo 3: testar fita de RNA sintetizada (trinca de RNA).
 // objetivo 4: transformar a fita de RNA em RNA 3D via construção de um editor molecular.
 // Objetivo 5: Visualizar o RNA 3D no editor molecular para encontrar possíveis danos na fita --- caso ela nao tenha sido saudavel no teste do objetivo 3.
 // Objetivo 6: Calcular as cargas de hirshfeld sobre cada átomo da fita.
-// Objetivo 7: faz uma conta de índices de reatividade Fukui condensados aos Átomos (IFCA) e mapas de cor para identificar a região de ataque eletrofílico externo ou nucleofílico externo ou radicalar (f+ = nucleofílico, f- eletrofílico, f0 = radicalar).
-// Objetivo 8: identificar padrões de reatividade possíveis danos na fita de RNA sintetizado.
-// Objetivo 9: Duplicar a Fita de RNA sintetizada em 2 FItas duplas de DNA (fase de síntese)
+// Objetivo 7: faz uma conta de índices de reatividade Fukui condensados aos Átomos (IFCA) e mapas de cor para identificar a região de ataque eletrofílico externo ou nucleofílico externo ou radicalar (f+ = nucleofílico, f- = eletrofílico, f0 = radicalar).
+// Objetivo 8: identificar padrões de reatividade, possíveis danos na fita de RNA sintetizado.
+// Objetivo 9: Duplicar a Fita de RNA sintetizada em 2 Fitas duplas de DNA (fase de síntese)
 // Objetivo 10: Calcular IFCA das fitas 1 e 2 do objetivo 9.
-// Objetivo 11: identificar possíveis danos nas fitas 1 e 2 via identificação nos mapas de cor.
-// Objetivo 12: Por fim, criar padronização de probabilidade de cancer do usuário.
+// Objetivo 11: Identificar possíveis danos nas fitas 1 e 2 via identificação nos mapas de cor.
+// Objetivo 12: Por fim, criar padronização de probabilidade de Câncer Hereditário do usuário.
 
 ## Licença
 
