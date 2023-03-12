@@ -1,4 +1,16 @@
-// Fas
+// objetivo 1: testar a fita de dna do usuário.
+// objetivo 2: sintetizar a fita de RNA via código SMILES.
+// objetivo 3: testar fita de RNA sintetizada (trinca de RNA).
+// objetivo 4: transformar a fita de RNA em RNA 3D via construção de um editor molecular.
+// Objetivo 5: Visualizar o RNA 3D no editor molecular para encontrar possíveis danos na fita --- caso ela nao tenha sido saudavel no teste do objetivo 3.
+// Objetivo 6: Calcular as cargas de hirshfeld sobre cada átomo da fita.
+// Objetivo 7: faz uma conta de índices de reatividade Fukui condensados aos Átomos (IFCA) e mapas de cor para identificar a região de ataque eletrofílico externo ou nucleofílico externo ou radicalar (f+ = nucleofílico, f- eletrofílico, f0 = radicalar).
+// Objetivo 8: identificar padrões de reatividade possíveis danos na fita de RNA sintetizado.
+// Objetivo 9: Duplicar a Fita de RNA sintetizada em 2 FItas duplas de DNA (fase de síntese)
+// Objetivo 10: Calcular IFCA das fitas 1 e 2 do objetivo 9.
+// Objetivo 11: identificar possíveis danos nas fitas 1 e 2 via identificação nos mapas de cor.
+// O
+
 
 
 
@@ -34,7 +46,7 @@ int verificaStrings(char *vermelho, char *azul) {
 }
 
 char* dnaToSmiles(char* dna) {
-    char* smiles = (char*) malloc((strlen(dna)*3 + 1) * sizeof(char)); /* aloca memória para a string SMILES */
+    char* smiles = (char*) malloc((strlen(dna)*3 + 1) * sizeof(char));
     if (smiles == NULL) {
         printf("Erro: não foi possível alocar memória para a string SMILES\n");
         return NULL;
@@ -111,8 +123,11 @@ int main(int argc, char *argv[]) {
         printf("azul:     \"%s\"\n", azul);
         printf("junta: \"%s\"\n", junta);
         printf("SMILES: \"%s\"\n", dnaToSmiles(junta));
-        printf("SMILES: ?????\n");
-        printf("Fita Dupla: Doente\n");
+        if(resultado == 0) {
+          printf("Fita Dupla: Doente\n");
+        } else {
+          printf("Fita Dupla: Saudavel\n");
+        }
     } else {
         printf("Erro desconhecido\n");
     }
