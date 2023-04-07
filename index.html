@@ -6,19 +6,22 @@
         <script src="script.js"></script>
         <link rel="stylesheet" href="style.css">
         <link rel="shortcut icon" type="image/x-icon" href="dnaIcon.ico">
+        <script src="script.js"></script>
     </head>
     <body>
-        <div class="flexContainer">
-            <div class="rectangleOne">
-                <h1 class="titulo">Editor DNA e RNA</h1>
-                <div class="rectangleTwo"></div>
-                <h1 class="dna">DNA</h1>
-                <!-- <div class="rectangleSix"></div> -->
-                <!-- <div class="rectangleSix"></div> -->
-                <input type="">
-                <h1 class="rna">RNA</h1>
-                <!-- <div class="rectangleFive"></div> -->
-                <input type="">
+        <div style="width: 50%; margin: 0 auto;">
+            <div style="height: 4em;"></div>
+            <div style="width: 25%; margin: 0 auto;">
+                <img src="dnaIcon.ico" alt="DNA">
+            </div>
+            <div style="height: 2em;"></div>
+            <div style="width: 50%; margin: 0 auto;">
+                <input type="text" id="rna" name="rna" placeholder="RNA">
+                <button type="button" onclick="enviarDados('rna', document.querySelector('#rna').value)">Começar</button><br><br>
+                <input type="text" id="dna" name="dna" placeholder="DNA">
+                <button type="button" onclick="enviarDados('dna', document.querySelector('#dna').value)">Começar</button>
+                <br><br>
+                <div id="resultado"></div>
             </div>
         </div>
     </body>
