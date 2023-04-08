@@ -5,8 +5,10 @@ function enviarDados(tipo, valor) {
             if(saida.length >= 2) {
                 main(saida[0], saida[1]);
             } else {
-                document.querySelector('#resultado').innerText = "Erro: é necessário informar duas strings na linha de comando\n";
+                document.querySelector('#resultado').innerText = "é necessário informar duas fitas";
             }
+        } else {
+            document.querySelector('#resultado').innerText = "é necessário informar duas fitas";
         }
         // document.querySelector('#resultado').innerText = `dna: ${valor}`;
     } else if (tipo === "rna") {
@@ -15,8 +17,10 @@ function enviarDados(tipo, valor) {
             if(saida.length >= 2) {
                 main(saida[0], saida[1]);
             } else {
-                document.querySelector('#resultado').innerText = "Erro: é necessário informar duas strings na linha de comando\n";
+                document.querySelector('#resultado').innerText = "é necessário informar duas fitas";
             }
+        } else {
+            document.querySelector('#resultado').innerText = "é necessário informar duas fitas";
         }
         // document.querySelector('#resultado').innerText = `rna: ${valor}`;
     } else {
