@@ -1,25 +1,13 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-    <head>
-        <title>DNA</title>
-        <meta charset="UTF-8">
-        <script src="script.js"></script>
-        <link rel="stylesheet" href="style.css">
-        <link rel="shortcut icon" type="image/x-icon" href="dnaIcon.ico">
-    </head>
-    <body>
-        <div class="flexContainer">
-            <div class="rectangleOne">
-                <h1 class="titulo">Editor DNA e RNA</h1>
-                <div class="rectangleTwo"></div>
-                <h1 class="dna">DNA</h1>
-                <!-- <div class="rectangleSix"></div> -->
-                <!-- <div class="rectangleSix"></div> -->
-                <input type="">
-                <h1 class="rna">RNA</h1>
-                <!-- <div class="rectangleFive"></div> -->
-                <input type="">
-            </div>
-        </div>
-    </body>
-</html>
+textarea {
+    max-height: 200px;
+    height: 24px;
+    overflow-y: hidden;
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    font-size: 16px;
+    line-height: 1.5;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+}
