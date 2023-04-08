@@ -74,7 +74,6 @@ function main(vermelho, azul) {
             junta[j++] = azul[i];
         }
     }
-    junta[j] = '\0';
     junta = junta.join("");
 
 
