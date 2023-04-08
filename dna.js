@@ -81,7 +81,7 @@ function main(vermelho, azul) {
 
 
     document.querySelector('#resultado').innerText = "";
-    document.querySelector('#resultado').innerText += (`junta: ${junta}`);
+    document.querySelector('#resultado').innerText += (`junta: "${junta}"`);
     const resultado = verificaStrings(vermelho, azul);
     if(resultado === false || resultado === true) {
         document.querySelector('#resultado').innerText += (`\nvermelho: "${vermelho}"`);
