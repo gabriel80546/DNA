@@ -9,7 +9,7 @@ function enviarDados(tipo, valor) {
                 document.querySelector('#resultado').innerText = "é necessário informar duas fitas";
             }
         } else {
-            document.querySelector('#resultado').innerText = "é necessário informar duas fitas";
+            document.querySelector('#resultado').innerText = "use \"CCGT GGCA\" como exemplo";
         }
         // document.querySelector('#resultado').innerText = `dna: ${valor}`;
     } else if (tipo === "rna") {
@@ -21,7 +21,7 @@ function enviarDados(tipo, valor) {
                 document.querySelector('#resultado').innerText = "é necessário informar duas fitas";
             }
         } else {
-            document.querySelector('#resultado').innerText = "é necessário informar duas fitas";
+            document.querySelector('#resultado').innerText = "use \"CCGT GGCA\" como exemplo";
         }
         // document.querySelector('#resultado').innerText = `rna: ${valor}`;
     } else {
