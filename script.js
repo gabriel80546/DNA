@@ -1,4 +1,5 @@
 function enviarDados(tipo, valor) {
+    document.querySelector('#resultado').innerText = "";
     if (tipo === "dna") {
         if(valor.length != 0) {
             var saida = valor.split(" ");
