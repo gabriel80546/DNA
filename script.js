@@ -28,3 +28,6 @@ function enviarDados(tipo, valor) {
         document.querySelector('#resultado').innerText = `ERRO`;
     }
 }
+
+
+
